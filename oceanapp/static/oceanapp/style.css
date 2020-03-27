@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto Cn", sans-serif;
+  overflow: scroll;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+a {
+  text-decoration: none;
+  color: rgb(204, 200, 200);
+}
+
+.container {
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.7rem;
+  width: 100%;
+  background-color: rgba(16, 24, 68, 0.931);
+}
+
+img.logo {
+  height: 90px;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  float: right;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 1rem 0;
+  margin: 0 3rem;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(76, 151, 173);
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+nav ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes slideIn {
+  from {
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+section h1 {
+  font-size: 4rem;
+  color: rgb(204, 200, 200);
+}
+
+section p {
+  font-size: 2rem;
+  color: rgb(204, 200, 200);
+}
+
+/*Home Section*/
+
+#home {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("img/header-plastic-oceanography.jpg") center no-repeat;
+  margin-top: 85px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  justify-content: center;
+  max-width: 120rem;
+  height: 50vh;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+#donate {
+  width: 80px;
+}
+
+/***********End of Home*********/
+
+/*************About***************/
+#about {
+  background-color: rgb(224, 224, 224);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  max-width: 120rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.about h1,
+.about p {
+  color: rgb(92, 92, 92);
+}
+
+.video {
+  margin: auto;
+}
+
+/*******************************************/
+
+/*****Gallery**********/
+#gallery {
+  background-color: rgb(19, 39, 66);
+}
+
+.gallery {
+  padding: 30px;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  max-width: 120rem;
+  height: auto;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 450px;
+  height: 300px;
+  margin: 10px;
+  transition: all 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/****************************************/
+
+/******Contact*******/
+#contact {
+  background-color: rgb(224, 224, 224);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  max-width: 120rem;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
+
+body {
+  background: rgb(30, 30, 40);
+}
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #195075;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #00bef8;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #195075;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #00bef8;
+}
+/******************************************/

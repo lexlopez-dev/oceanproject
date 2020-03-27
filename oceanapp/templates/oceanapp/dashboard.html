@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Charity Org</title>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{% static 'oceanapp/style.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="img/logo.png" alt="" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <section id="contact">
+        <div class="contact">
+          <br /><br /><br />
+          <h1>Dashboard <br />Enter Organziation Info:</h1>
+          <form>
+            <input
+              name="name"
+              type="text"
+              class="feedback-input"
+              placeholder="Name"
+            />
+            <input
+              name="organziation"
+              type="text"
+              class="feedback-input"
+              placeholder="Organization"
+            />
+            <input
+              name="address"
+              type="text"
+              class="feedback-input"
+              placeholder="Address"
+            />
+            <input
+              name="CEO"
+              type="text"
+              class="feedback-input"
+              placeholder="CEO"
+            />
+            <textarea
+              name="text"
+              class="feedback-input"
+              placeholder="Organization Details"
+            ></textarea>
+            <input type="submit" value="SUBMIT" />
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
